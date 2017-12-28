@@ -1,0 +1,89 @@
+body{
+    background: #000;
+    animation: colors 6s infinite;
+}
+@keyframes colors{
+    0%{
+        background: black;
+    }
+    25%{
+        background: yellow;
+    }
+    35%{
+        background: red;
+    }
+    50%{
+        background: white;
+    }
+    75%{
+        background: green;
+    }
+    100%{
+        background: blue;
+    }
+
+}
+.box{
+    display: block;
+    height: 100px;
+    width: 100px;
+    transform-style: preserve-3d;
+    transform: rotatex(30deg) rotatey(30deg);
+animation: rotato 5s infinite;
+    position: absolute;
+top: 50%;
+    left: 50%;
+    margin-top: -60px;
+    margin-left: -40px;
+}
+@keyframes rotato {
+0%{
+    transform: rotatey(0deg)rotatex(30deg);
+
+}
+    25%{
+        transform: rotatex(130deg)rotatey(90deg);
+    }
+    50%{
+        transform: rotatey(180deg)rotatex(30deg);
+
+    }
+    75%{
+        transform: rotatey(360deg)rotatex(130deg);
+    }
+
+    100%{
+        transform: rotatey(0deg)rotatex(30deg);
+    }
+}
+.wall{position: absolute;
+    top: 0px;
+    left: 0px;
+    /*border: dashed;*/
+    height: 100px;
+    width: 100px;
+display: inline-block;
+    background: whitesmoke;
+    opacity: 0.6;
+}
+.frontwall{
+    background: blue;
+    transform: rotatey(0deg) translatez(50px);
+    transform-style: preserve-3d;
+
+}
+.leftwall{
+    background: red;
+transform: rotatey(90deg) translatez(50px);
+ transform-style: preserve-3d;
+}
+.rightwall{
+    background: green;
+    transform: rotatey(-90deg) translatez(50px);
+    transform-style: preserve-3d;
+}
+.backwall{
+    background: yellow;
+    transform:translatez(-50px) rotatey(180deg);
+    transform-style: preserve-3d;
+}
